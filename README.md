@@ -1,4 +1,4 @@
-# BatotoRipper
+# ImgurRipper
 
 This gem is intended to be used with my ripper application as a way to abstract different comic sources away from the models that contain them
 
@@ -6,7 +6,7 @@ This gem is intended to be used with my ripper application as a way to abstract 
 
 Add this line to your application's Gemfile:
 
-    gem 'batoto_ripper'
+    gem 'imgur_ripper'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install batoto_ripper
+    $ gem install imgur_ripper
 
 ## Usage
 
@@ -22,7 +22,7 @@ TODO: Write usage instructions here
 
 ## Contributing
 
-1. Fork it ( http://github.com/nelseric/batoto_ripper/fork )
+1. Fork it ( http://github.com/nelseric/imgur_ripper/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
