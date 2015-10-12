@@ -3,7 +3,18 @@ require 'spec_helper'
 describe ImgurRipper::Comic, vcr: true do
   subject(:comic) { ImgurRipper::Comic.new url: url }
   let(:url) do
-    "http://bato.to/read/_/88615/100-is-too-cheap_by_peebs"
+    "https://imgur.com/a/2kqoy"
+  end
+
+  describe ".applies?" do
+    it "matches an imgur url" do
+      expect(ImgurRipper::Comic.applies?(url)).to be_true
+    end
+
+    let(:bad_url) { "http://bato.to/comic/_/comics/beelzebub-r4" }
+    it "doesn't match anything else" do
+      expect(ImgurRipper::Comic.applies?(bad_url)).to be_false
+    end
   end
 
   describe "#chapters" do

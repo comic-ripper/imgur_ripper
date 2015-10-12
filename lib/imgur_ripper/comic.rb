@@ -6,6 +6,10 @@ module ImgurRipper
   class Comic
     attr_accessor :url, :language
 
+    def self.applies? url
+      true
+    end
+
     def initialize(url:, language: "lang_English", **_extra)
       @url = url
       @language = language

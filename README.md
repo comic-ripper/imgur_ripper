@@ -2,6 +2,8 @@
 
 This gem is intended to be used with my ripper application as a way to abstract different comic sources away from the models that contain them
 
+Imgur albums are a one chapter comic
+
 ## Installation
 
 Add this line to your application's Gemfile:
