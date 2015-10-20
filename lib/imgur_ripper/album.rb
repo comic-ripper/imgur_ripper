@@ -1,6 +1,4 @@
 require 'rest-client'
-require 'nokogiri'
-require 'pry'
 require 'uri'
 
 module ImgurRipper
@@ -34,7 +32,18 @@ module ImgurRipper
     end
 
     def images
-      info['images'].map { |image| Image.new image }
+      @images ||= info['images'].each_with_index.map do |image, index|
+        Image.new(image_url: image['link'], order: index)
+      end
+    end
+
+    # Ripper protocol
+    def chapters
+      [self]
+    end
+
+    def pages
+      images
     end
 
     def to_json(*options)

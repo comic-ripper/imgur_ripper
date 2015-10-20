@@ -2,6 +2,7 @@ require 'imgur_ripper/version'
 require 'imgur_ripper/configuration'
 require 'imgur_ripper/client'
 require 'imgur_ripper/album'
+require 'imgur_ripper/image'
 
 module ImgurRipper
   def self.parsers
