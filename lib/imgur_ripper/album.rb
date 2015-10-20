@@ -33,11 +33,23 @@ module ImgurRipper
 
     def images
       @images ||= info['images'].each_with_index.map do |image, index|
-        Image.new(image_url: image['link'], order: index)
+        Image.new(image_url: image['link'], number: index)
       end
     end
 
     # Ripper protocol
+    def number
+      0
+    end
+
+    def volume
+      0
+    end
+
+    def title
+      info['title']
+    end
+
     def chapters
       [self]
     end

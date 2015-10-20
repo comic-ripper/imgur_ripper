@@ -2,11 +2,15 @@ require 'pry'
 
 module ImgurRipper
   class Image
-    attr_reader :image_url, :order
+    attr_reader :image_url, :number
 
-    def initialize(image_url:, order:)
+    def initialize(image_url:, number:)
       @image_url = image_url
-      @order = order
+      @number = number
+    end
+
+    def image
+      @image ||= RestClient.get image_url
     end
 
     def to_json(*options)
@@ -17,12 +21,12 @@ module ImgurRipper
       {
         JSON.create_id => self.class.name,
         image_url: image_url,
-        order: order
+        number: number
       }
     end
 
     def self.json_create(data)
-      new(image_url: data['image_url'], order: data['order'])
+      new(image_url: data['image_url'], number: data['number'])
     end
   end
 end
