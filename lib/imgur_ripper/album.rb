@@ -15,7 +15,7 @@ module ImgurRipper
     end
 
     def album_id
-      url.path.match(%r{/a/(\w+)})[1]
+      url.path.match(%r{/a/(\w+)}).try(:"[]", 1)
     end
 
     def valid?
