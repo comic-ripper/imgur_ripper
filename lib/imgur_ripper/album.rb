@@ -18,6 +18,10 @@ module ImgurRipper
       url.path.match(%r{/a/(\w+)}).try(:"[]", 1)
     end
 
+    def translator
+      ""
+    end
+
     def valid?
       (url.hostname.match(/imgur\.com$/) && album_id) ? true : false
     end
