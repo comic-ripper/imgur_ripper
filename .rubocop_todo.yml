@@ -10,10 +10,4 @@
 # Offense count: 6
 # Configuration parameters: Exclude.
 Style/Documentation:
-  Exclude:
-    - 'lib/batoto_ripper.rb'
-    - 'lib/batoto_ripper/chapter.rb'
-    - 'lib/batoto_ripper/comic.rb'
-    - 'lib/batoto_ripper/page.rb'
-    - 'lib/batoto_ripper/title_parser.rb'
-    - 'lib/batoto_ripper/version.rb'
+  Enabled: false
