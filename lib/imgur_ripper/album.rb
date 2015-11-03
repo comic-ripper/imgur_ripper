@@ -47,7 +47,7 @@ module ImgurRipper
     end
 
     def volume
-      0
+      nil
     end
 
     def title
