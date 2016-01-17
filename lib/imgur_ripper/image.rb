@@ -1,5 +1,3 @@
-require 'pry'
-
 module ImgurRipper
   class Image
     attr_reader :image_url, :number
