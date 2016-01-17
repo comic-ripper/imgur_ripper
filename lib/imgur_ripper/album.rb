@@ -19,7 +19,7 @@ module ImgurRipper
     end
 
     def translator
-      ""
+      ''
     end
 
     def valid?
@@ -27,7 +27,7 @@ module ImgurRipper
     end
 
     def info
-      @info ||= JSON.parse(ImgurRipper.client.album_info album_id)['data']
+      @info ||= JSON.parse(ImgurRipper.client.album_info(album_id))['data']
     end
 
     # This can be slow, especially the first time

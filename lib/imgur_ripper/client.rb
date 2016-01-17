@@ -1,8 +1,9 @@
+# frozen_string_literal: true
 require 'rest-client'
 
 module ImgurRipper
   class Client
-    BASE_URL = 'https://api.imgur.com/3'
+    BASE_URL = 'https://api.imgur.com/3'.freeze
 
     def get(url, **params)
       RestClient.get BASE_URL + url, base_params.merge(params)
